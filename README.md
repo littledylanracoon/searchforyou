@@ -9,22 +9,25 @@
 
 ## 基本資訊
 名稱:SearchGOT7bot
-
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/linebot.jpg)
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/bot.png)
 功能:
 
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/function.jpg)
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/pic.png)
 除了選單上的功能 還有其他：
 a.輸入「雲端連結」:回覆含有各樣相簿的雲端連結
 b.輸入「video」:回覆療癒嗓音的唱歌影片
-c.輸入「我要找歌」:可輸入要找的歌曲 會回覆對應的專輯與發行時間🎵  
+c.輸入「我要找歌」:可輸入要找的歌曲 會回覆對應的專輯與發行時間🎵 可查詢所有韓專日專歌曲 包含改版專迷你專正規專等等
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/song.jpg) <br />
+智慧辨別：即使只輸入關鍵字也能找到!去掉空格不分大小寫皆能成功搜尋~ <br />
 d.輸入「我要找專輯」:可輸入要找的專輯 會回覆該專輯收錄的所有歌曲🎵
-
-可查詢所有韓專日專歌曲 包含改版專迷你專正規專等   
-
-智慧辨別：即使只輸入關鍵字也能找到!去掉空格不分大小寫皆能成功搜尋~
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/album.jpg) <br />
 
 可以連續查詢 想換別的功能直接按選單就可以了! 
 
 ## FSM圖
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/fsm.png)
 
 ### state說明
 
