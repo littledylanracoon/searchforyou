@@ -10,9 +10,8 @@
 ## 基本資訊
 名稱:SearchGOT7bot <br /> <br />
 ![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/linebot.jpg)
-![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/bot.png)
-功能:
-
+![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/bot.png)  <br />
+## 功能:
 ![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/function.jpg)
 ![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/pic.png)
 除了選單上的功能 還有其他：
