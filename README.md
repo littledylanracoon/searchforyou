@@ -5,10 +5,10 @@
 因為自己經營一個和追星有關的ig帳號，平常有許多追蹤者會詢問有關偶像的大小事，一一回覆較耗時間，即時性消息一個個發給所有人也十分麻煩；所以設計了一個多功能的linebot讓大家能透過平台隨時獲得資訊。
 
 ## 設計
-透過圖文選單與輸入關鍵字，可多功能獲得不同方面的資訊，也透過line manager定時推播每日團體行程的訊息，並包含了功能總覽的使用說明讓使用者更能了解。
+透過圖文選單與輸入關鍵字，可多功能獲得不同方面的資訊，也透過line manager定時推播每日團體行程的訊息，並包含了功能總覽的使用說明讓使用者更能了解如何使用。
 
 ## 基本資訊
-名稱:SearchGOT7bot
+名稱:SearchGOT7bot <br /> <br />
 ![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/linebot.jpg)
 ![image](https://github.com/littledylanracoon/searchforyou/blob/master/img/bot.png)
 功能:
