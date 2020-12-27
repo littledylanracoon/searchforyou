@@ -91,7 +91,8 @@ def album(text) :
     elif year <= 206 and year >= 203:
         return "THE New Era 2018年6月20日 日語單曲"  
     else:
-        return "Not found Yet" 
+        wrong = "沒有找到唷😢" + '\n' + "可能無法查詢的原因:" + '\n' + "把Gimme打成Give me" + "把Moon U打成Moon You" + '\n' + "把Run Away打成Runaway" + '\n' + "把GOT ur LUV打成GOT Your love" + '\n' + "把Hey Yah打成Hey Yeah" + '\n' + "把Sing For U打成Sing for you" + '\n' + "把Feels Good打成Feel Good" + '\n' + "把Every Day打成Everyday" + '\n' + "把She's A Monster打成She is A Monster" + '\n' + "把O.M.G打成OMG" + '\n' + "把U Got Me打成You got me" + '\n' + "把Degree打成1 degree" + '\n' + "把97 YOUNG & RICH打成97 YOUNG and RICH" + '\n' + "把Over & Over打成Over and Over" + '\n' + "把Crash & Burn打成Crash and Burn"
+        return wrong 
 
 
 

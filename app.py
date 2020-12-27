@@ -13,7 +13,7 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "state2", "state3", "state4", "state5", "state6", "state7", "state8", "state9", "state10", "state11", "state12", "state13"],
+    states=["user", "state1", "state2", "state3", "state4", "state5", "state6", "state7", "state8", "state9", "state10", "state11", "state12", "state13", "state14"],
     transitions=[
         {
             "trigger": "advance",
@@ -68,6 +68,12 @@ machine = TocMachine(
             "source": "user",
             "dest": "state11",
             "conditions": "is_going_to_state11",
+        },
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state14",
+            "conditions": "is_going_to_state14",
         },
         {
             "trigger": "advance",
@@ -289,7 +295,7 @@ machine = TocMachine(
             "dest": "state12",
             "conditions": "is_going_to_state12",
         },
-        {"trigger": "go_back", "source": ["state1", "state2","state3","state4","state5","state6","state7"], "dest": "user"},
+        {"trigger": "go_back", "source": ["state1", "state2","state3","state4","state5","state6","state7","state14"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
@@ -385,4 +391,5 @@ def show_fsm():
 
 if __name__ == "__main__":
     port = os.environ.get("PORT", 8000)
+    machine.get_graph().draw("fsm.png", prog="dot", format="png")
     app.run(host="0.0.0.0", port=port, debug=True)

@@ -153,7 +153,7 @@ def song(word):
             result = result + str(count) + '.' + song[i]+'\n'
             count += 1
     else:
-        result = result + 'not found'
+        result = result + '沒有找到唷😢請再確認一次是否輸入正確！'
 
     return result
     

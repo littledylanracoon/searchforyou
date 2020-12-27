@@ -70,7 +70,13 @@ class TocMachine(GraphMachine):
         answer = (test.encode('UTF-8').isalpha() or test.find("me") != -1 or test.find("present") != -1 or test.find("hey") != -1 or test.find("let") != -1 or test.find("sing") != -1 or test.find("7") != -1 or test.find("got it") != -1 or test.find("last piece") != -1 or test.find("breath") != -1 or test.find("spinning") != -1 or test.find("arrival") != -1 or test.find("departure") != -1 or test.find("turbulence") != -1 or test.find("翻天") != -1)
         print(answer)
         return answer
-        
+
+    def is_going_to_state14(self, event):
+        text = event.message.text
+        print('this is going to state14')
+        print(text)
+        return text.lower() == "雲端連結"
+
     def on_enter_state1(self, event):
         print("I'm entering state2")
         reply_token = event.reply_token
@@ -114,7 +120,7 @@ class TocMachine(GraphMachine):
 
     def on_enter_state3(self, event):
         print("I'm entering state3")
-        schedule = "🗓12.27(日) 一直娛簽售" + '\n' + "時間: 10:00 珍榮" + '\n' + "🗓12/31(四) AIS5GVirtualCountdown慶典" + '\n' + "時間: 19:00" + '\n' + "觀看平台:AISPLAY"
+        schedule = "🗓12/31(四) AIS5GVirtualCountdown慶典" + '\n' + "時間: 19:00" + '\n' + "觀看平台:AISPLAY"
         reply_token = event.reply_token
         send_text_message(reply_token, schedule)
         self.go_back()
@@ -131,7 +137,7 @@ class TocMachine(GraphMachine):
         url4 = 'https://m.weibo.cn/status/4580844591123170?'
         url5 = 'http://curaprox-gda.co.kr/'
 
-        vote = "1、首爾歌謠大賞：⏰1月24日 23:00" + '\n' + "投票教程:" + '\n' + url + '\n' + "投票軟體:The 30th SMA Official Vote APP" + '\n' + "入圍部門:本賞/人氣賞/韓流特別賞/SMA傳奇新人獎" + '\n' + "注意事項:主攻本賞(Main Awards)" + '\n\n' + "2、Gaon： ⏰二輪截止 12月27日 17:00 三輪截止 1月10日 17:00" + '\n' + "投票教程:" + '\n' + url1 + '\n' + "投票軟體: Mubeat" + '\n\n' + "3、WhosFandom Award：⏰三輪截止 12月27日 13:00" + '\n' + "投票教程:" + '\n' + url2 + '\n' +"投票軟體: Whosfan" + '\n' + "注意事項:註冊時須填寫推薦碼 第三輪4進2 採積分制" + '\n\n' + "4、金唱片（大陸區）：⏰12月31日 23:59" + '\n' + "投票教程:" + '\n' + url3 + '\n' + "投票軟體: QQ音樂" + '\n\n' + "5、金唱片（海外區）：⏰12月31日 23:00" + '\n' + "投票教程:" + '\n' + url4 + '\n' + "投票軟體: " + '\n' + url5 + '\n' + "注意事項: 建議使用Chrome"
+        vote = "1、首爾歌謠大賞：⏰1月24日 23:00" + '\n' + "投票教程:" + '\n' + url + '\n' + "投票軟體:The 30th SMA Official Vote APP" + '\n' + "入圍部門:本賞/人氣賞/韓流特別賞/SMA傳奇新人獎" + '\n' + "注意事項:主攻本賞(Main Awards)" + '\n\n' + "2、Gaon： ⏰二輪截止 12月27日 17:00 三輪截止 1月10日 17:00" + '\n' + "投票教程:" + '\n' + url1 + '\n' + "投票軟體: Mubeat" + '\n\n' + "3、金唱片（大陸區）：⏰12月31日 23:59" + '\n' + "投票教程:" + '\n' + url3 + '\n' + "投票軟體: QQ音樂" + '\n\n' + "4、金唱片（海外區）：⏰12月31日 23:00" + '\n' + "投票教程:" + '\n' + url4 + '\n' + "投票軟體: " + '\n' + url5 + '\n' + "注意事項: 建議使用Chrome"
 
         reply_token = event.reply_token
         send_text_message(reply_token, vote)
@@ -154,7 +160,8 @@ class TocMachine(GraphMachine):
     def on_enter_state6(self, event):
         print("I'm entering state6")
         reply_token = event.reply_token  
-        send_text_message(reply_token, "function")
+        tell = "✨功能總覽：" + '\n' + "1.官方帳號(點擊選單第一排第二個)：" + '\n' + "包含官方 & 團員所有社交軟體的帳號" + '\n' + "2.人生語錄(點擊選單第一排第三個)：" + '\n' + "每一位成員有8-9句語錄 隨機回覆充滿驚喜與力量💚" + '\n' + "3.投票總匯(點擊選單第二排第一個)：" + '\n' + "年末回歸不知道要去哪裡投甚麼票嗎?看這裡就對了!" + '\n' + "4.當月行程(點擊選單第二排第二個)：" + '\n' + "即時更新官宣行程 掌握GOT7行程我有💪" + '\n' + "5.隨機圖片(點擊選單第二排第三個)：" + '\n' + "將掉落隨機一張男友照 馬上存起來😍" + '\n' + "6.雲端連結(輸入「雲端連結」：" + '\n' + "含有表情包、男友照、資料庫等相簿 應有盡有!" + '\n' + "7.我要找歌(輸入「我要找歌」)：" + '\n' + "按照指示輸入要找的歌曲 會回覆對應的專輯與發行時間🎵" + '\n' + "8.我要找專輯(輸入「我要找專輯」)：" + '\n' + "按照指示輸入要找的專輯 會回覆該專輯收錄的所有歌曲🎵" + '\n' + "⚠注意事項：" + '\n' + "a.可查詢所有韓專日專歌曲 包含改版專迷你專正規專等" + '\n' + "b.除了歌曲本身即為中文以外 請以歌曲/專輯原本的英文名查詢 no哈德凱瑞no陀螺專no愛的供氧😠" + '\n' + "c.可以連續查詢 不需要每查一次就打一次我要找歌/找專輯 想換別的功能直接按選單就可以了!" + '\n' + "d.如果覺得自己應該沒輸錯但顯示錯誤 可能是現在正在錯誤的狀態 請再打一次「我要找歌」或「我要找專輯」" + '\n' + "e.在查詢過程中如果輸入後沒有立即得到回覆 可以再重新輸入一次(小bug抱歉😭)" + '\n' + "以上注意事項 如果有其他問題請聯絡被窩👇" + '\n' + "IG： ahgaseigot7777 謝謝💕"        
+        send_text_message(reply_token, tell)
         self.go_back()
 
     def on_exit_state6(self):
@@ -210,6 +217,16 @@ class TocMachine(GraphMachine):
         print(song(word))
         send_text_message(reply_token, song(word))
         print("i'm here")
+        self.go_back()
+        
+    def on_exit_state12(self):
+        print("Leaving state12")
+    
+    def on_enter_state14(self,event):
+        print("I'm entering state14")
+        reply_token = event.reply_token
+        url = 'https://drive.google.com/drive/folders/1KBC054JqN4BWR7s-kx5asup632WZnGo5?usp=sharing'
+        send_text_message(reply_token, url)
         self.go_back()
         
     def on_exit_state12(self):
