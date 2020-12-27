@@ -28,21 +28,21 @@ d.輸入「我要找專輯」:可輸入要找的專輯 會回覆該專輯收錄�
 
 ### state說明
 
-user:開始使用
+user:開始使用<br />
 state1:輸入人生語錄<br />
-state2:輸入官方帳號
-state3:輸入當月行程
-state4:輸入投票總匯
-state5:輸入video
-state6:輸入功能總覽
-state7:輸入隨機圖片
-state8:輸入我要找歌
-state9:依照輸入的歌曲 顯示其所在的專輯
-state10:找完歌曲後自動進入此state 等待下一個動作(繼續查詢或換一個功能 功用像lamda任意門)
-state11:輸入我要找專輯
-state12:依照輸入的專輯 顯示其所收錄的所有歌曲
-state13:找完專輯後自動進入此state 等待下一個動作(繼續查詢或換一個功能 功用像lamda任意門)
-state14:輸入雲端連結   
+state2:輸入官方帳號<br />
+state3:輸入當月行程<br />
+state4:輸入投票總匯<br />
+state5:輸入video<br />
+state6:輸入功能總覽<br />
+state7:輸入隨機圖片<br />
+state8:輸入我要找歌<br />
+state9:依照輸入的歌曲 顯示其所在的專輯<br />
+state10:找完歌曲後自動進入此state 等待下一個動作(繼續查詢或換一個功能 功用像lamda任意門)<br />
+state11:輸入我要找專輯<br />
+state12:依照輸入的專輯 顯示其所收錄的所有歌曲<br />
+state13:找完專輯後自動進入此state 等待下一個動作(繼續查詢或換一個功能 功用像lamda任意門)<br />
+state14:輸入雲端連結<br />
 
 作者：林筠倩 資訊111 
 
