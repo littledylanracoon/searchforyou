@@ -13,7 +13,7 @@ def song(word):
     'If You Do', 'Put Your Hands Up', 'Feels Good', 'GOOD', 'Eyes On You', 'Tic Tic Tok', 'Confession Song', 'Every Day', 'To Star',
     'Moon U', 'Teenager', 'You Are', 'Firework', 'Remember You', 'To Me', 'Face', 
     'Lullaby', 'Enough', 'Save You', 'No One Else', 'I Am Me', 'Sunrise', 'OMW','Made It', 'My Youth', 'Nobody Knows', 'Party', 'Fine', 'MiRACLE',
-    'Take Me To You', 'Come On', "1：31AM", 'Higher', 'I Love It', 'WOLO', 'King', 'Think About It', '이젠', 'Hunger', 'Phoenix',
+    'Take Me To You', 'Come On', "1:31AM", 'Higher', 'I Love It', 'WOLO', 'King', 'Think About It', '이젠', 'Hunger', 'Phoenix',
     'Hello', 'Girls Girls Girls', 'I Like You', 'Follow Me', 'Like Oh', 'Playground', 'U Got Me', 'A', 'Bad Behavior', 'Good Tonight', 'Forever Young',
     'Just right', 'Before The Full Moon Rises', 'My Reaction', 'Nice', 'Mine', 'Back To Me', 'If You Do', 'Put Your Hands Up', 'Feels Good', 'GOOD', 'Eyes On You', 'Tic Tic Tok',
     'Fly', "Can't", 'See The Light', 'FISH', 'REWIND', 'Beggin On My Knees', 'Something Good', 'HOME RUN', 

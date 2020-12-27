@@ -31,6 +31,10 @@ class TocMachine(GraphMachine):
     def is_going_to_state5(self, event):
         text = event.message.text
         return text.lower() == "video"
+    
+    def is_going_to_state6(self, event):
+        text = event.message.text
+        return text.lower() == "功能總覽"
 
     def is_going_to_state7(self, event):
         text = event.message.text
@@ -47,7 +51,7 @@ class TocMachine(GraphMachine):
         test = text.replace(" ", "")
         print('this is going to state9')
         print(test)
-        answer = (test.encode('UTF-8').isalpha() or test == "Yo 翻天覆地 Yo" or test ==  "如果沒有離別" or test == "備忘録" or test ==  "この胸に" or test == "1+1")
+        answer = (test.encode('UTF-8').isalpha() or text.lower() == "Over & Over".lower() or text.lower() == "Over&Over".lower() or text == "25" or text.lower() == "O.M.G".lower() or text.lower() == "I WON'T LET YOU GO".lower() or text.lower() == "97 YOUNG & RICH".lower() or text.lower() == "97 YOUNG&RICH".lower() or text.lower() == "Don't Care".lower() or text.lower() == "She's A Monster".lower() or text.lower() == "1:31AM".lower() or text.lower() == "Can't".lower() or text == "이젠" or text.lower() == "Crash & Burn".lower() or text.lower() == "Crash&Burn".lower() or text.lower() == "Yo 翻天覆地 Yo".lower() or text.lower() == "Yo翻天覆地Yo".lower() or text ==  "如果沒有離別" or text == "備忘録" or text ==  "この胸に" or text == "2" or text == "1+1")
         print(answer)
         return answer
     
@@ -60,12 +64,13 @@ class TocMachine(GraphMachine):
     def is_going_to_state12(self, event):
         text = event.message.text
         test = text.replace(" ", "")
+        test = test.lower()
         print('this is going to state12')
         print(test)
-        answer = (test.encode('UTF-8').isalpha() or test.find("翻天") != -1)
+        answer = (test.encode('UTF-8').isalpha() or test.find("me") != -1 or test.find("present") != -1 or test.find("hey") != -1 or test.find("let") != -1 or test.find("sing") != -1 or test.find("7") != -1 or test.find("got it") != -1 or test.find("last piece") != -1 or test.find("breath") != -1 or test.find("spinning") != -1 or test.find("arrival") != -1 or test.find("departure") != -1 or test.find("turbulence") != -1 or test.find("翻天") != -1)
         print(answer)
         return answer
-
+        
     def on_enter_state1(self, event):
         print("I'm entering state2")
         reply_token = event.reply_token
@@ -109,7 +114,7 @@ class TocMachine(GraphMachine):
 
     def on_enter_state3(self, event):
         print("I'm entering state3")
-        schedule = "🗓12.26(六) 一直娛簽售" + '\n' + "時間:" + '\n' + "(a) 10:00 宜恩/BamBam/有謙" + '\n' + "(b) 13:00 在范/榮宰/嘉爾" + '\n' + "🗓12.27(日) 一直娛簽售" + '\n' + "時間: 10:00 珍榮" + '\n' + "🗓12/31(四) AIS5GVirtualCountdown慶典" + '\n' + "時間: 19:00" + '\n' + "觀看平台:AISPLAY"
+        schedule = "🗓12.27(日) 一直娛簽售" + '\n' + "時間: 10:00 珍榮" + '\n' + "🗓12/31(四) AIS5GVirtualCountdown慶典" + '\n' + "時間: 19:00" + '\n' + "觀看平台:AISPLAY"
         reply_token = event.reply_token
         send_text_message(reply_token, schedule)
         self.go_back()
@@ -145,6 +150,15 @@ class TocMachine(GraphMachine):
 
     def on_exit_state5(self):
         print("Leaving state5")
+    
+    def on_enter_state6(self, event):
+        print("I'm entering state6")
+        reply_token = event.reply_token  
+        send_text_message(reply_token, "function")
+        self.go_back()
+
+    def on_exit_state6(self):
+        print("Leaving state6")
 
     def on_enter_state7(self, event):
         print("I'm entering state7")
@@ -182,7 +196,7 @@ class TocMachine(GraphMachine):
     def on_enter_state11(self, event):
         print("I'm entering state11")
         reply_token = event.reply_token
-        send_text_message(reply_token, "請輸入想查看專輯內所有歌曲的專輯名(除了日專翻天覆地外 其他需輸入專輯英文名)")
+        send_text_message(reply_token, "請輸入想查看專輯內所有歌曲的專輯名(除了日專翻天↑覆地外 其他需輸入專輯英文名)")
         self.advance(event)
 
     def on_exit_state11(self,event):

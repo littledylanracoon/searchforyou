@@ -13,7 +13,7 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "state2", "state3", "state4", "state5", "state7", "state8", "state9", "state10", "state11", "state12", "state13"],
+    states=["user", "state1", "state2", "state3", "state4", "state5", "state6", "state7", "state8", "state9", "state10", "state11", "state12", "state13"],
     transitions=[
         {
             "trigger": "advance",
@@ -44,6 +44,12 @@ machine = TocMachine(
             "source": "user",
             "dest": "state5",
             "conditions": "is_going_to_state5",
+        },
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state6",
+            "conditions": "is_going_to_state6",
         },
         {
             "trigger": "advance",
@@ -96,6 +102,12 @@ machine = TocMachine(
         {
             "trigger": "advance",
             "source": "state8",
+            "dest": "state6",
+            "conditions": "is_going_to_state6",
+        },
+        {
+            "trigger": "advance",
+            "source": "state8",
             "dest": "state7",
             "conditions": "is_going_to_state7",
         },
@@ -134,6 +146,12 @@ machine = TocMachine(
             "source": "state11",
             "dest": "state5",
             "conditions": "is_going_to_state5",
+        },
+        {
+            "trigger": "advance",
+            "source": "state11",
+            "dest": "state6",
+            "conditions": "is_going_to_state6",
         },
         {
             "trigger": "advance",
@@ -196,6 +214,12 @@ machine = TocMachine(
         {
             "trigger": "advance",
             "source": "state10",
+            "dest": "state6",
+            "conditions": "is_going_to_state6",
+        },
+        {
+            "trigger": "advance",
+            "source": "state10",
             "dest": "state7",
             "conditions": "is_going_to_state7",
         },
@@ -244,6 +268,12 @@ machine = TocMachine(
         {
             "trigger": "advance",
             "source": "state13",
+            "dest": "state6",
+            "conditions": "is_going_to_state6",
+        },
+        {
+            "trigger": "advance",
+            "source": "state13",
             "dest": "state7",
             "conditions": "is_going_to_state7",
         },
@@ -259,7 +289,7 @@ machine = TocMachine(
             "dest": "state12",
             "conditions": "is_going_to_state12",
         },
-        {"trigger": "go_back", "source": ["state1", "state2","state3","state4","state5","state7"], "dest": "user"},
+        {"trigger": "go_back", "source": ["state1", "state2","state3","state4","state5","state6","state7"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
